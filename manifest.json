@@ -1,0 +1,52 @@
+{
+   "author": "Mark Gilbert, Matthew Anderson, Nathan Powers",
+   "background": {
+      "css": [ "/css/jquery-ui.css", "/css/spectrum.css" ],
+      "persistent": false,
+      "scripts": [ "/js/jquery-3.1.0.min.js", "/js/jquery-ui.js", "/js/spectrum.js", "/js/background.js", "/js/popup.js", "/js/bootstrap.min.js" ]
+   },
+   "content_scripts": [ {
+      "css": [ "/css/index.css", "/css/jquery-ui.css" ],
+      "js": [ "/js/jquery-3.1.0.min.js", "/js/spectrum.js", "/js/jquery-ui.js", "/js/ticketlist.js" ],
+      "matches": [ "*://clients.hostwinds.com/3610hw8138/supporttickets.php?view=active", "*://clients.hostwinds.com/3610hw8138/supporttickets.php?*filter=1", "*://clients.hostwinds.com/3610hw8138/supporttickets.php" ]
+   }, {
+      "css": [ "/css/index.css", "/css/jquery-ui.css" ],
+      "js": [ "/js/jquery-3.1.0.min.js", "/js/jquery-ui.js", "/js/spectrum.js", "/js/soluspage.js" ],
+      "matches": [ "https://vmaster.hostwindsdns.com:5656/admincp/manage.php?id=*" ]
+   }, {
+      "css": [ "/css/jquery-ui.css" ],
+      "js": [ "/js/jquery-3.1.0.min.js", "/js/jquery-ui.js", "/js/spectrum.js", "/js/productpage.js" ],
+      "matches": [ "*://clients.hostwinds.com/3610hw8138/clientsservices.php?userid=*&id=*", "*://clients.hostwinds.com/3610hw8138/clientsservices.php?userid=*&id=*&success=true", "*://clients.hostwinds.com/3610hw8138/clientsservices.php?userid=*" ]
+   }, {
+      "css": [ "/css/index.css", "/css/jquery-ui.css" ],
+      "js": [ "/js/jquery-3.1.0.min.js", "/js/allpages.js" ],
+      "matches": [ "*://clients.hostwinds.com/3610hw8138/*", "*://clients.hostwinds.com/3610hw8138/*" ]
+   }, {
+      "css": [ "/css/index.css", "/css/jquery-ui.css" ],
+      "js": [ "/js/jquery-ui.js", "/js/spectrum.js", "/js/notes.js" ],
+      "matches": [ "*://clients.hostwinds.com/3610hw8138/supporttickets.php?action=view*", "*://clients.hostwinds.com/3610hw8138/supporttickets.php?action=view*" ]
+   }, {
+      "js": [ "/js/jquery-3.1.0.min.js", "/js/chat.js" ],
+      "matches": [ "*://*.livechatinc.com/*" ],
+      "runat": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-E2QllVXwwwJKq6vO6TviB2etylICYWgCgSGL0drK64k=' 'sha256-GoGA81HddYWdqCAjYHmuXiIa2RusqsH4iW+GEE9q0z8=' 'sha256-4NlesHvA51at+o1IyYbRnCxmiB84oHvpQum3ZqzmwAs=' 'sha256-cyUcJ4MB79lVMCiUYHj0BNc28DmmeHHZz3XkjW16qB8=' 'sha256-FXP8qWHPc1GSBtpexSPdDrMtXG5umodEojnGO3RUlTQ='; object-src 'self'",
+   "description": "Highlights and counts up tickets by technician on WHMCS, as well as show desktop notifications when new tickets come in.",
+   "icons": {
+      "19": "/img/icon.png",
+      "48": "/img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6fl5kwQLm9zAkoIcHjKcjEJ1j9MV8gRMUoMElQA3SZ461vFqfXJVbpEcl/p2QkWTqs5AlHVvmTtfbK31819k905bgFtrS2ujI5nRn9Lc8J0Zloz2UnCK47h4NrmeoQITi/dtuflBAKcXJHPF5SZGxSZhNkHLt70frWHk2xxS5AboBY+kn4IAFltKwW7KLj1LO9DwDZOqijG179BF/Il8P/iQkWVllSPLZuCxL9EHkNOGQpecMLvnJeT88i/ORqk/98729o2o/D4P++fcMBIkLRDepEol8biTrd4Kw86TXRWnebyS4pikKV9zBI+3Zsfr+gYe8cH+phyklcESlxCGOQIDAQAB",
+   "manifest_version": 2,
+   "name": "WHMCS Helper",
+   "page_action": {
+      "default_icon": "/img/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Click this to configure options."
+   },
+   "permissions": [ "declarativeContent", "activeTab", "tabs", "notifications", "storage", "*://*/*/*", "*://*/*", "*://*/*/*", "*://*/*/*/*" ],
+   "short_name": "WHMCS Helper",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4.6",
+   "web_accessible_resources": [ "/img/icon48.png, staff.txt" ]
+}

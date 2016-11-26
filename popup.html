@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>WHMCS Extension Settings</title>
+    <link rel='stylesheet' href='/css/spectrum.css' />
+    <link rel='stylesheet' href='/css/dark-theme.css' />
+    <link rel='stylesheet' href='/css/jquery-ui.css' />
+    <link rel='stylesheet' href='/css/index.css' />
+    <script type="text/javascript" src="/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="/js/spectrum.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: "Arial";
+            font-size: 100%;
+            min-width: 700px;
+            width: 700px!important;
+            max-width: 700px!important;
+            max-height: 600px;
+            height: 485px;
+            line-height: 1.4em;
+            color: #f2f2f2;
+            background-color: #0e1012;
+            margin-bottom: 60px;
+        }
+    </style>
+    <div id='tabs'>
+        <ul>
+            <li><a id="tab1" href="#tabs-1">Settings</a></li>
+            <!-- <li><a id="tab2" href="#tabs-2">On Staff</a></li>--->
+            <li><a id="tab3" href="#tabs-3">Access Manager</a></li>
+            <li><a id="tab4" href="#tabs-4">DDoS Protection</a></li>
+            <li><a id="tab5" href="#tabs-5">Ticket Status</a></li>
+            <li><a id="tab6" href="#tabs-6">NetFlow</a></li>
+            <!--<li><a id="tab7" href="#tabs-7">Network Tools</a></li>
+            <!-- <li><a id="tab8" href="#tabs-8">CrimeFlaire</a></li>--->
+            <li><a id="tab9" href="#tabs-9">Other Tools</a></li>
+            <li><a id="tab10" href="#tabs-10">Zabbix</a></li>
+            <!-- <li><a href="#tabs-10">NameServer Registration</a></li>--->
+        </ul>
+        <div id="tabs-1">
+            <table id="creds">
+                <tr>
+                    <td class="cre" style="height:30px;vertical-align:bottom;">
+                        <h4> </h4>
+                    </td>
+                    <td class="cred" style="height:30px;vertical-align:bottom;">
+                        <h4>Credentials</h4>
+                    </td>
+                    <td class="credid"></td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred" style="vertical-align: bottom;height:30px;">
+                        <h3><a id="SEAIPMI" href='rdpaurl: '>Seattle IPMI</a></h3>
+                    </td>
+                    <td class="credid"></td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="SeaIPMIUser">
+                            <input id="SeaUser" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="User Name" /> </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="SeaIPMIPass">
+                            <input id="SeaPass" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="Password " /> </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred" style="vertical-align: bottom;height:40px;">
+                        <h3><a id="DALIPMI" href='rdpaurl: '>Dallas IPMI</a></h3>
+                    </td>
+                    <td class="credid"></td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="DalIPMIUser">
+                            <input id="DalUser" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="User Name" /> </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="DalIPMIPass">
+                            <input id="DalPass" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="Password" /> </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred" style="vertical-align: bottom;height:40px;">
+                        <h3><a id="DALtrans" href='rdpaurl: '>Dallas Transfer Box</a></h3>
+                    </td>
+                    <td class="credid"></td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="DalTransUser">
+                            <input id="DalTUser" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="User Name" /> </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="DalTransPass">
+                            <input id="DalTPass" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="Password" /> </form>
+                    </td>
+                </tr>
+                <tr style="">
+                    <td class="cre"></td>
+                    <td class="cred" style="vertical-align: bottom;height:40px;">
+                        <h3><a id="SEAtrans" href='rdpaurl: '>Seattle Transfer Box</a></h3>
+                    </td>
+                    <td class="credid"></td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="SeaTransUser">
+                            <input id="SeaTUser" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="User Name" /> </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="SeaTransPass">
+                            <input id="SeaTPass" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="Password" /> </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred" style="vertical-align: bottom;height:40px;">
+                        <h3><a id="TIME" href='rdpaurl: '>TimeClock</a></h3>
+                    </td>
+                    <td class="credid"></td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <form id="TIMEPass">
+                            <input id="TCPass" type="text" /> </td>
+                    <td class="credid">
+                        <input type="submit" class="submits" value="Password" /> </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred">
+                        <h5 style="height:25px;margin-top:25px;">New tickets notifications</h5>
+                    </td>
+                    <td class="credid">
+                        <input style="margin-left:25px;" id="chkNotify" type="checkbox"> </td>
+                </tr>
+                <tr>
+                    <td class="cre"></td>
+                    <td class="cred" style="vertical-align: bottom;height:40px;">
+                        <button id="btn_reload">Reset</button>
+                    </td>
+                    <td class="credid"></td>
+                </tr>
+            </table>
+            <table id="clrs">
+                <tr>
+                    <td style="height:30px;vertical-align:bottom;">
+                        <h4>Colors</h4>
+                    </td>
+                </tr>
+                <tr style="height:30px;vertical-align:bottom;">
+                    <td style="height:40px;vertical-align:middle;">Unassigned:</td>
+                    <td style="height:50px;vertical-align:bottom;" class="colors">
+                        <input type="text" class="colorSelect" id="colUnassigned" /> </td>
+                </tr>
+                <tr>
+                    <td>Inactive Tech:</td>
+                    <td class="colors">
+                        <input type="text" class="colorSelect" id="colInactive" /> </td>
+                </tr>
+                <tr>
+                    <td>Ignore Open Ticket:</td>
+                    <td class="colors">
+                        <input type="text" class="colorSelect" id="colIgnore" /> </td>
+                </tr>
+                <tr>
+                    <td>No Message:</td>
+                    <td class="colors">
+                        <input type="text" class="colorSelect" id="colNomsg" /> </td>
+                </tr>
+                <tr>
+                    <td>Customer Reply 0m:</td>
+                    <td class="colors">
+                        <input type="text" class="colorSelect" id="colCR1" /> </td>
+                </tr>
+                <tr>
+                    <td>Customer Reply >30m:</td>
+                    <td class="colors">
+                        <input type="text" class="colorSelect" id="colCR2" /> </td>
+                </tr>
+                <tr>
+                    <td>Open:</td>
+                    <td class="colors">
+                        <input type="text" class="colorSelect" id="colOpen" /> </td>
+                </tr>
+                <tr>
+                    <td>On Hold:</td>
+                    <td class="colors">
+                        <input type="text" class="colorSelect" id="colOnHold" /> </td>
+                </tr>
+                <tr>
+                    <td>In Progress:</td>
+                    <td class="colors">
+                        <input type="text" class="colorSelect" id="colInProgress" /> </td>
+                </tr>
+            </table>
+            <table id="techsInTbl" style="float:left;width: 240px;height:30px;">
+                <tr>
+                    <td style="height:30px;vertical-align:bottom;">
+                        <h4 id="resettechs" style="cursor:pointer;">Technicians</h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="tabs-2"> </div>
+        <div id="tabs-3">
+            <table id="quickaccess">
+                <tr class="td1">
+                    <td><a href='wext: hwafkstart'>Start HWAFK</a> </td>
+                    <td><a href='wext: hwafkkill'>Kill HWAFK</a> </td>
+                </tr>
+                <tr class="td1">
+                    <!--<td><a id="MM" href='https://mattermost.hostwindsdns.com/hostwinds/channels/town-square'>MatterMost</a> </td>-->
+                    <td><a id="DC" href='https://customer.dallascolo.com/login.html'>Dallas Colo</a> </td>
+                    <td><a id="LC" href='https://chat.hostwinds.com/index.php/site_admin/'>Live Chat</a> </td>
+                    <td><a id="SW" href='http://staff.hostwinds.com/wiki/Main_Pagel'>Staff Wiki</a> </td>
+                </tr>
+                <tr class="td1">
+                    <td><a id="Solus" href='https://vmaster.hostwindsdns.com:5656/admincp/adminhome.php'>Solus</a> </td>
+                    <td><a id="WHM" href='https://clients.hostwinds.com/3610hw8138/whmcsconnect.php'>WHM Manager</a> </td>
+                    <td><a id="DSM" href='https://clients.hostwinds.com/3610hw8138/addonmodules.php?module=dedicated_server_management'>Dedis</a> </td>
+                    <td><a id="KB" href='http://tasks.hostwinds.com/?controller=DashboardController&action=show'>KanBan</a> </td>
+                </tr>
+                <tr class="td1">
+                    <td><a id="DALNET" href='http://dalnetflow.hostwinds.com/cacti/graph_view.php?action=tree&tree_id=2'>Dallas NetFlow</a> </td>
+                    <td><a id="SEANET" href='http://seanetflow.hostwinds.com/cacti/graph_view.php?action=tree&tree_id=2'>Seattle NetFlow</a> </td>
+                    <td><a id="ZAB" href='http://monitor.hostwinds.com/zabbix/'>Zabbix</a> </td>
+                    <td><a id="TC" href='https://clients.hostwinds.com/TS/'>Ticket Counts</a> </td>
+                </tr>
+                <tr>
+                    <td style="height:30px;vertical-align:bottom;">
+                        <h4 id="WHMCSIN" style="cursor:pointer;">Technicians</h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="tabs-4">
+            <input type="text" id="search" placeholder="  live search"></input>
+            <div id="DDoS"></div>
+        </div>
+        <div id="tabs-5">
+            <div id="TS"></div>
+        </div>
+        <div id="tabs-6">
+            <div>Seattle NetFlow</div>
+            <div id="SeaNetFlow"></div>
+            <div>Dallas NetFlow</div>
+            <div id="DalNetFlow"></div>
+            <div>Aggregate NetFlow</div>
+            <div id="DAggNetFlow"></div>
+            <div id="SAggNetFlow"></div>
+        </div>
+        <!--<div id="tabs-7">
+            <label>In Progress . . . Do not use</label>
+            <br />
+            <label>Seattle IP Adder</label>
+            <div id="SIP"></div>
+            <label>Seattle C-Class IP Adder</label>
+            <div id="SCIP"></div>
+            <label>Dallas IP Adder</label>
+            <div id="DIP"></div>
+            <label>Dallas C-Class IP Adder</label>
+            <div id="DCIP"></div>
+            <label>NameServer Registration</label>
+            <div id="NS"></div>
+        </div><!-->
+        <div id="tabs-8">
+            <div id="CF"></div>
+        </div>
+        <div id="tabs-9">
+            <label>In Progress . . . Do not use</label>
+            <div id="MT">
+                <label>Mail Tester</label>
+            </div>
+        </div>
+        <div id="tabs-10">
+            <div id="ZBX"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/popup.js"></script>
+</body>
+
+</html>

